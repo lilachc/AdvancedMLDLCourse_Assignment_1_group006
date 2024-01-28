@@ -1,0 +1,15 @@
+,model,Score (RMSE),Hyperparams used,Features dropped,New features created,Runtime trainining + inference (seconds),Hardware used (GPU/CPU/TPU),Explainability (top 3 features)
+0,Random forest,56.15084019428151,"RandomForestRegressor(max_depth=10, max_features='auto', n_estimators=500,
+                      random_state=42)","['datetime', 'weather', 'traffic', 'windspeed', 'holiday']","['hour', 'hour_sin', 'is_2011', 'hour_cos']",466.182492017746,CPU,"['hour', 'pollution', 'hour_sin']"
+1,XG boost,40.76516105024253,"XGBRegressor(base_score=None, booster=None, callbacks=None,
+             colsample_bylevel=None, colsample_bynode=None,
+             colsample_bytree=0.7, device=None, early_stopping_rounds=None,
+             enable_categorical=False, eval_metric=None, feature_types=None,
+             gamma=None, grow_policy=None, importance_type=None,
+             interaction_constraints=None, learning_rate=0.03, max_bin=None,
+             max_cat_threshold=None, max_cat_to_onehot=None,
+             max_delta_step=None, max_depth=7, max_leaves=None,
+             min_child_weight=5, missing=nan, monotone_constraints=None,
+             multi_strategy=None, n_estimators=500, n_jobs=None, nthread=4,
+             num_parallel_tree=None, ...)","['datetime', 'traffic']","['weather_3', 'weather_1', 'season_2', 'season_1', 'hour_sin', 'weather_2', 'hour_cos', 'season_3', 'season_4', 'is_2011', 'hour']",173.49314785003662,CPU,"['hour', 'hour_sin', 'is_2011']"
+2,Ridge Regression,108.98390757989414,Ridge(alpha=10.0),"['workingday', 'datetime', 'atemp', 'traffic']","['season_2', 'weather_3', 'weather_1', 'season_1', 'hour_sin', 'hour_cos', 'season_4', 'is_2011', 'hour']",0.609412431716919,CPU,"['pollution', 'hour_cos', 'hour_sin']"
